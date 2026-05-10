@@ -58,65 +58,76 @@
 <body>
     <div class="container">
         <h1>Faster Stronger</h1>
-        <p class="subtitle">Privacy Policy &mdash; Effective March 15, 2026</p>
+        <p class="subtitle">Privacy Policy &mdash; Effective May 10, 2026</p>
 
         <h2>Overview</h2>
-        <p>Faster Stronger is a personal health coaching app that analyzes your Apple Health data to provide insights, trends, and advice. Your privacy is fundamental to how we built this app.</p>
+        <p>Faster Stronger is a personal health coaching app that reads your Apple Health data on-device and uses AI to generate personalized insights and coaching. Your privacy is fundamental to how the app is built &mdash; we do not run our own servers, do not maintain user accounts, and do not store your health data outside your device.</p>
 
         <h2>Data We Access</h2>
-        <p>With your explicit permission, Faster Stronger reads the following data from Apple HealthKit:</p>
+        <p>With your explicit permission, Faster Stronger reads the following data types from Apple HealthKit:</p>
         <ul>
             <li>Step count and walking/running distance</li>
             <li>Active energy burned and exercise minutes</li>
-            <li>Heart rate and resting heart rate</li>
-            <li>Sleep analysis</li>
+            <li>Heart rate, resting heart rate, and heart rate variability (HRV)</li>
+            <li>Sleep analysis (in-bed, asleep, core, deep, REM, awake stages)</li>
+            <li>Workouts (activity type, duration, calories, distance)</li>
             <li>Flights climbed</li>
-            <li>Weight and body measurements</li>
+            <li>VO2 max</li>
         </ul>
-        <p>We also access your device microphone if you choose to use the voice coaching feature.</p>
+        <p>The app accesses your device microphone only if you choose to use the optional voice coaching feature.</p>
 
         <h2>How Your Data Is Used</h2>
         <ul>
-            <li><strong>On-device analysis:</strong> Your health data is processed on your device to compute trends, segments, and statistics.</li>
-            <li><strong>AI-powered insights:</strong> Aggregated health summaries (not raw data points) are sent to AI services (OpenAI, Anthropic, or Berget) to generate personalized coaching messages and health narratives.</li>
-            <li><strong>No raw health data is stored on external servers.</strong> AI providers receive only summarized statistics needed to generate insights.</li>
+            <li><strong>On-device analysis:</strong> Your health data is processed locally on your device to compute trends, segments, charts, and statistics.</li>
+            <li><strong>AI-powered insights:</strong> When the AI coaching features run, your recent health data &mdash; daily metrics, sleep stages, workouts, heart-rate samples &mdash; is included in the prompt sent to your selected AI provider so the model can generate personalized coaching. The data leaves your device only for the duration of the request.</li>
+            <li><strong>No third-party storage of your data is requested.</strong> AI providers may temporarily retain prompt content for abuse-monitoring as described in their own policies, but the data is not used to train models or shared further.</li>
         </ul>
 
         <h2>Data Storage</h2>
         <ul>
-            <li>All health data remains in Apple HealthKit on your device.</li>
-            <li>Cached insights and coaching messages are stored locally on your device.</li>
+            <li>All HealthKit data remains in Apple Health on your device.</li>
+            <li>The app caches the most recent AI insights, coaching messages, daily snapshots, and answered follow-up questions locally on your device so it can run offline and personalize over time. This local cache is removed when you delete the app.</li>
             <li>We do not maintain any external database of your health information.</li>
-            <li>We do not have user accounts or authentication systems.</li>
+            <li>The app has no user accounts, no logins, and no authentication systems.</li>
         </ul>
 
         <h2>Third-Party Services</h2>
-        <p>Faster Stronger uses the following third-party AI services to generate health insights:</p>
+        <p>Faster Stronger uses third-party services to deliver the AI coaching experience. You can choose your AI provider in Settings.</p>
         <ul>
-            <li><strong>OpenAI</strong> &mdash; for health analysis and coaching (<a href="https://openai.com/privacy">openai.com/privacy</a>)</li>
-            <li><strong>Anthropic</strong> &mdash; for health analysis (<a href="https://www.anthropic.com/privacy">anthropic.com/privacy</a>)</li>
-            <li><strong>ElevenLabs</strong> &mdash; for voice coaching (<a href="https://elevenlabs.io/privacy">elevenlabs.io/privacy</a>)</li>
+            <li><strong>Anthropic (Claude)</strong> &mdash; AI provider for health analysis and coaching (<a href="https://www.anthropic.com/privacy">anthropic.com/privacy</a>)</li>
+            <li><strong>Berget (GLM models)</strong> &mdash; alternate AI provider for health analysis (<a href="https://berget.ai/privacy">berget.ai/privacy</a>)</li>
+            <li><strong>OpenAI</strong> &mdash; alternate AI provider used in some configurations (<a href="https://openai.com/privacy">openai.com/privacy</a>)</li>
+            <li><strong>ElevenLabs</strong> &mdash; voice synthesis and recognition for the optional voice coaching feature (<a href="https://elevenlabs.io/privacy">elevenlabs.io/privacy</a>)</li>
+            <li><strong>Apple StoreKit</strong> &mdash; processes your subscription purchase. Apple, not Faster Stronger, handles your payment information.</li>
         </ul>
-        <p>These services receive only aggregated health summaries, not raw HealthKit data. We recommend reviewing their respective privacy policies.</p>
+        <p>We recommend reviewing the privacy policies of any provider you choose to use.</p>
+
+        <h2>Subscriptions and Purchases</h2>
+        <p>Faster Stronger Pro is an auto-renewable subscription billed monthly through your Apple ID. The subscription automatically renews each month unless cancelled at least 24 hours before the end of the current period. You can manage or cancel your subscription at any time in iOS <em>Settings &gt; Apple ID &gt; Subscriptions</em>.</p>
+        <p>The app receives anonymous transaction identifiers from Apple StoreKit to verify your subscription status. We do not receive your name, email, billing address, or payment details &mdash; that information stays with Apple.</p>
+
+        <h2>Diagnostics</h2>
+        <p>If you tap <em>Send Diagnostics</em> in Settings, the app will send your recent in-app log and basic device information (model, iOS version, locale, app version) to the developer to help fix bugs. This is opt-in &mdash; nothing is sent without you explicitly tapping the button. Diagnostic submissions never include your health data, credentials, or API keys.</p>
 
         <h2>Data Sharing</h2>
-        <p>We do not sell, rent, or share your personal health data with any third parties for marketing or advertising purposes. We do not use any analytics or tracking SDKs.</p>
+        <p>We do not sell, rent, or share your personal health data with any third parties for marketing or advertising purposes. We do not use any analytics or tracking SDKs. We do not use IDFA, advertising identifiers, or cross-app tracking.</p>
 
         <h2>Your Control</h2>
         <ul>
-            <li>You can revoke HealthKit access at any time in iOS Settings &gt; Privacy &amp; Security &gt; Health.</li>
-            <li>You can delete locally cached data by deleting the app.</li>
-            <li>All HealthKit permissions are granular &mdash; you choose which data types to share.</li>
+            <li>You can revoke HealthKit access at any time in iOS <em>Settings &gt; Privacy &amp; Security &gt; Health &gt; Faster Stronger</em>.</li>
+            <li>HealthKit permissions are granular &mdash; you choose which data types to share.</li>
+            <li>Deleting the app removes all locally cached data.</li>
+            <li>You can cancel your subscription at any time in iOS <em>Settings &gt; Apple ID &gt; Subscriptions</em>.</li>
         </ul>
 
         <h2>Children's Privacy</h2>
-        <p>Faster Stronger is not directed at children under 13. We do not knowingly collect data from children.</p>
+        <p>Faster Stronger is not directed at children under 16. We do not knowingly collect data from children. If you believe a child has used the app, contact us and we will help you remove any locally cached data.</p>
 
         <h2>Changes to This Policy</h2>
-        <p>We may update this privacy policy from time to time. Changes will be reflected on this page with an updated effective date.</p>
+        <p>We may update this privacy policy from time to time. Material changes will be reflected on this page with an updated effective date.</p>
 
         <h2>Contact</h2>
-        <p>If you have questions about this privacy policy, please contact us at <a href="mailto:hlandgren@gmail.com">hlandgren@gmail.com</a>.</p>
+        <p>If you have questions about this privacy policy or how the app handles your data, please contact <a href="mailto:hlandgren@gmail.com">hlandgren@gmail.com</a>.</p>
 
         <div class="footer">
             <p>&copy; 2026 Henrik Landgren. All rights reserved.</p>
