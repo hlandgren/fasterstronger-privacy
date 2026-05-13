@@ -58,7 +58,7 @@
 <body>
     <div class="container">
         <h1>Faster Stronger</h1>
-        <p class="subtitle">Privacy Policy &mdash; Effective May 10, 2026</p>
+        <p class="subtitle">Privacy Policy &mdash; Effective May 14, 2026</p>
 
         <h2>Overview</h2>
         <p>Faster Stronger is a personal health coaching app that reads your Apple Health data on-device and uses AI to generate personalized insights and coaching. Your privacy is fundamental to how the app is built &mdash; we do not run our own servers, do not maintain user accounts, and do not store your health data outside your device.</p>
@@ -78,8 +78,9 @@
 
         <h2>How Your Data Is Used</h2>
         <ul>
-            <li><strong>On-device analysis:</strong> Your health data is processed locally on your device to compute trends, segments, charts, and statistics.</li>
-            <li><strong>AI-powered insights:</strong> When the AI coaching features run, your recent health data &mdash; daily metrics, sleep stages, workouts, heart-rate samples &mdash; is included in the prompt sent to your selected AI provider so the model can generate personalized coaching. The data leaves your device only for the duration of the request.</li>
+            <li><strong>On-device analysis:</strong> Your health data is processed locally on your device to compute trends, segments, charts, and statistics. This requires only HealthKit permission.</li>
+            <li><strong>Explicit consent for AI features:</strong> Before any health data leaves your device for a third-party AI provider, the app presents a separate &ldquo;Enable AI Coaching&rdquo; consent screen that explains what data will be sent, to which provider, and why. AI features remain disabled until you tap &ldquo;Enable AI Coaching&rdquo;. You can revoke this consent at any time in Settings &gt; AI Coaching.</li>
+            <li><strong>AI-powered insights:</strong> Once you consent, your recent health data &mdash; daily metrics, sleep stages, workouts, heart-rate samples &mdash; is included in the prompt sent to your selected AI provider only when you trigger an analysis. The data leaves your device only for the duration of the request.</li>
             <li><strong>No third-party storage of your data is requested.</strong> AI providers may temporarily retain prompt content for abuse-monitoring as described in their own policies, but the data is not used to train models or shared further.</li>
         </ul>
 
